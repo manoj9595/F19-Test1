@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class BlazeDemoTest {
 
@@ -32,7 +33,9 @@ public class BlazeDemoTest {
 		// 3. Open Chrome and go to the base url;
 		driver.get(baseUrl);
 		
-		WebElement form = driver.findElement(By.xpath("/html/body/div[3]/form/select[1]"));
+		WebElement testDropDown = driver.findElement(By.name("fromport"));
+		Select fromport = new Select(testDropDown); 
+		// trial and error 
 	}
 
 }
